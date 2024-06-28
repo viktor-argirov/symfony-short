@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('/assets/profil.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="profile">
+    <h1>Welcome, {{ user.userIdentifier }}!</h1>
+    <p>Your profile details can be displayed here.</p>
+    <a href="{{ path('home') }}" class="btn btn-primary">Go to News Feed</a>
+</div>
+{% endblock %}
